@@ -1,5 +1,7 @@
 # Fosspill Ffmt
 
+# WIP, Not working yet!
+
 ## How do I install these formulae?
 `brew install fosspill/ffmt/<formula>`
 
