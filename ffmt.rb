@@ -9,7 +9,7 @@ class Ffmt < Formula
   license "GPL-3.0"
 
   # depends_on "cmake" => :build
-  depends_on "dotnet-sdk" => :build
+  #depends_on "dotnet-sdk" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
