@@ -4,20 +4,20 @@
 class ffmt < Formula
   desc "FFXIV Modding Tool is the Cross-platform Commandline interface alternative for TexTools"
   homepage "https://ffmt.pwd.cat/"
-  url "https://github.com/fosspill/FFXIV_Modding_Tool/releases/download/v0.9.6.1/FFXIV_Modding_Tool-mac-0.9.6.1.zip"
-  sha256 "d117dc9996a5c3dd2dc9efaa1c61032e12b72dc5e1bfa16f9ee714697e24d385"
+  url "https://github.com/fosspill/FFXIV_Modding_Tool.git", tag => "v0.9.6.1", :revision => "aecef7ec6af82672fb98875500f14a7b0205d9c7"
+  #sha256 "d117dc9996a5c3dd2dc9efaa1c61032e12b72dc5e1bfa16f9ee714697e24d385"
   license "GPL-3.0"
 
   # depends_on "cmake" => :build
+  depends_on "dotnet-sdk" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./build.sh"
+    cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{HOMEBREW_FORMULA_PREFIX}/ffmt"
     # system "cmake", ".", *std_cmake_args
+    # bin.install "ffmt.sh" => "ffmt"
   end
 
   test do
