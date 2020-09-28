@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class ffmt < Formula
+class FFMT < Formula
   desc "FFXIV Modding Tool is the Cross-platform Commandline interface alternative for TexTools"
   homepage "https://ffmt.pwd.cat/"
   url "https://github.com/fosspill/FFXIV_Modding_Tool.git", :tag => "v0.9.6.1", :revision => "aecef7ec6af82672fb98875500f14a7b0205d9c7"
