@@ -2,7 +2,7 @@
 First ensure that brew is installed:
 https://brew.sh/
 
-## How do I install these formulae?
+## How do I install this formula?
 Run either of the following in your terminal
 
 `brew install fosspill/ffmt/ffmt`
