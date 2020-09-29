@@ -1,11 +1,17 @@
-# Fosspill Ffmt
+# FFMT for Homebrew (For macOS, Linux and WSL)
+First ensure that brew is installed:
+https://brew.sh/
 
-# WIP, Not working yet!
+## How do I install this formula?
+Run either of the following in your terminal
 
-## How do I install these formulae?
-`brew install fosspill/ffmt/<formula>`
+`brew install fosspill/ffmt/ffmt`
 
-Or `brew tap fosspill/ffmt` and then `brew install <formula>`.
+Or `brew tap fosspill/ffmt` and then `brew install ffmt`.
 
-## Documentation
+
+## Brew Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+
+## FFMT Documentation
+`ffmt help` or check [ffmt's documentation](https://ffmt.pwd.cat).
