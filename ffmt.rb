@@ -29,7 +29,7 @@ class Ffmt < Formula
     cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{HOMEBREW_PREFIX}/ffmt"
     File.write('./ffmt', shellscript)
     cp_r "ffmt", "#{HOMEBREW_PREFIX}/ffmt/ffmt.sh"
-    #bin.install "ffmt"
+    bin.install "ffmt"
   end
 
   test do
