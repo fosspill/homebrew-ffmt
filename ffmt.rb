@@ -7,8 +7,9 @@ class Dotnet < Requirement
   satisfy(:build_env => false) { which("dotnet") }
 
   def message; <<~EOS
-    dotnet is required; install it via:
+    dotnet is required; install it via one of:
       brew cask install dotnet-sdk
+      the official dotnet install instructions
     EOS
   end
 end
