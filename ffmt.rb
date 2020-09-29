@@ -25,9 +25,9 @@ class Ffmt < Formula
   depends_on Dotnet => :build
 
   def install
-  	shellscript = "#!/bin/bash\nINSTALL_DIR=#{HOMEBREW_PREFIX}/ffmt\n$INSTALL_DIR/ffmt \"$@\""
+  	shellscript = "#!/bin/bash\nINSTALL_DIR=#{prefix}/ffmt\n$INSTALL_DIR/ffmt \"$@\""
     system "./build.sh"
-    cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{HOMEBREW_PREFIX}/ffmt"
+    cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{prefix}/ffmt"
     File.write('./ffmt', shellscript)
     bin.install "ffmt"
   end
