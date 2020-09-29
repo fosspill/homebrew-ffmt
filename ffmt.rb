@@ -23,7 +23,7 @@ class Ffmt < Formula
   depends_on Dotnet => :build
 
   def install
-  	shellscript = "#!/bin/bash\nINSTALL_DIR=#{prefix}/ffmt\n$INSTALL_DIR/ffmt \"$@\""
+  	shellscript = "#!/bin/bash\nINSTALL_DIR=#{prefix}/ffmt\ndotnet $INSTALL_DIR/ffmt.dll \"$@\""
     system "./build.sh"
     cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{prefix}/ffmt"
     File.write('./ffmt', shellscript)
