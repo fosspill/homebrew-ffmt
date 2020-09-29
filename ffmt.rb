@@ -4,7 +4,7 @@
 class Dotnet < Requirement
   fatal true
 
-  satisfy(:build_env => false) { which("dotnet") }
+  satisfy(:build_env => false) { which("dotnet-test") }
 
   def message; <<~EOS
     dotnet is required; install it via:
