@@ -4,7 +4,7 @@
 class Dotnet < Requirement
   fatal true
 
-  satisfy(:build_env => false) { which("dotnet-test") }
+  satisfy(:build_env => false) { which("dotnet") }
 
   def message; <<~EOS
     dotnet is required; install it via:
@@ -28,7 +28,6 @@ class Ffmt < Formula
     system "./build.sh"
     cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{HOMEBREW_PREFIX}/ffmt"
     File.write('./ffmt', shellscript)
-    cp_r "ffmt", "#{HOMEBREW_PREFIX}/ffmt/ffmt.sh"
     bin.install "ffmt"
   end
 
