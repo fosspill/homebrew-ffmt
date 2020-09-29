@@ -19,12 +19,12 @@ class Ffmt < Formula
   url "https://github.com/fosspill/FFXIV_Modding_Tool.git", :tag => "v0.9.6.1", :revision => "aecef7ec6af82672fb98875500f14a7b0205d9c7"
   #sha256 "d117dc9996a5c3dd2dc9efaa1c61032e12b72dc5e1bfa16f9ee714697e24d385"
   license "GPL-3.0"
-  shellscript "#!/bin/bash\nINSTALL_DIR=#{HOMEBREW_PREFIX}/ffmt\n$INSTALL_DIR/ffmt \"$@\""
 
   # depends_on "cmake" => :build
   depends_on Dotnet => :build
 
   def install
+  	shellscript = "#!/bin/bash\nINSTALL_DIR=#{HOMEBREW_PREFIX}/ffmt\n$INSTALL_DIR/ffmt \"$@\""
     system "./build.sh"
     cp_r "FFXIV_Modding_Tool/bin/Release/netcoreapp3.1", "#{HOMEBREW_PREFIX}/ffmt"
     File.write('./ffmt', shellscript)
