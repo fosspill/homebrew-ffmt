@@ -14,7 +14,7 @@ end
 class Ffmt < Formula
   desc "FFXIV Modding Tool is the Cross-platform Commandline interface alternative for TexTools"
   homepage "https://ffmt.pwd.cat/"
-  url "https://github.com/fosspill/FFXIV_Modding_Tool.git", :tag => "v0.9.9", :revision => "7631c15ac9a1090b6685d8a571e5e75f0490b320"
+  url "https://github.com/fosspill/FFXIV_Modding_Tool.git", :tag => "v0.9.10", :revision => "a7cdc7557f88f76cab9b04d0b2a3255a6aa7cd55"
   license "GPL-3.0"
 
   depends_on Dotnet => :build
